@@ -15,16 +15,16 @@ Download files in a directory called "GateO" in your Arduino directory
 ---
 
 File description<br>
-  <i>GateO.ino</i> - main sketch file: include setup() and main()<br<br>
-  Led_Managing.ino - funcions called to control leds flashing and colour<br>
-  Serial.ino - funcions managing serial port on USB. Used only on testing (\_TEST_ON_USB macro defined)<br>
-  SIM800.ino - functions related to SIM800L control and command<br>
-  SMS.ino - functions understanding SMS command<br>
-  Phone_book.ino - funcions managing phone book over sim card via SIM800L<br>
-  Common.ino - other general purpose functions.<br>
-  \_GO_Defs.h - constants declaration via \#define<br>
-  \_GO_GlobVar.h - global variables definition/declaration<br>
-  \_GO_Lang_EN.h - English language labels for software localization<br>
-  \_GO_Lang_IT.h - Italian language labels for software localization<br>
-  \_GO_TestMsg.h - macros definition for the debugging levels<br>
+  * *GateO.ino* - main sketch file: include setup() and main()<br<br>
+  * *Led_Managing.ino* - funcions called to control leds flashing and colour<br>
+  * *Serial.ino* - funcions managing serial port on USB. Used only on testing (\_TEST_ON_USB macro defined)<br>
+  * *SIM800.ino* - functions related to SIM800L control and command<br>
+  * *SMS.ino* - functions understanding SMS command<br>
+  * *Phone_book.ino* - funcions managing phone book over sim card via SIM800L<br>
+  * *Common.ino* - other general purpose functions.<br>
+  * *\_GO_Defs.h* - constants declaration via \#define<br>
+  * *\_GO_GlobVar.h* - global variables definition/declaration<br>
+  * *\_GO_Lang_EN.h* - English language labels for software localization<br>
+  * *\_GO_Lang_IT.h* - Italian language labels for software localization<br>
+  * *\_GO_TestMsg.h* - macros definition for the debugging levels<br>
 
