@@ -53,7 +53,7 @@ Descrizione dei file
   * *GateO.ino* - sketch principale: include setup() e main()<br>
   * *Led_Managing.ino* - funzioni invocate per controllare lo stato dei led: accensione e colore<br>
   * *Serial.ino* - funzioni per gestire la comunicazione verso il serial monitor. Usato solo in fase di test (\_TEST_ON_USB macro definita)<br>
-  * *SIM800.ino* - funczioni relative alla gestione di SIM800L<br>
+  * *SIM800.ino* - funzioni relative alla gestione di SIM800L<br>
   * *SMS.ino* - funzioni per l'interpretazione dei comandi SMS<br>
   * *Phone_book.ino* - funzioni per gestire la ribrica su sim card attraverso SIM800L<br>
   * *Common.ino* - altre funzioni di uso vario.<br>
@@ -61,5 +61,5 @@ Descrizione dei file
   * *\_GO_GlobVar.h* - definizione/dichiarazione di variabili globali<br>
   * *\_GO_Lang_EN.h* - etichette messaggi in lingua inglese: per la localizzazione del software<br>
   * *\_GO_Lang_IT.h* - etichette messaggi in lingua italiana: per la localizzazione del software<br>
-  * *\_GO_TestMsg.h* - definizioen delle macro per i diversi livelli di debug<br>
+  * *\_GO_TestMsg.h* - definizione delle macro per i diversi livelli di debug<br>
 
