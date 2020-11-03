@@ -14,7 +14,7 @@ Download files in a directory called "GateO" in your Arduino directory
 
 ---
 
-File description<br>
+Files description
   * *GateO.ino* - main sketch file: include setup() and main()<br<br>
   * *Led_Managing.ino* - funcions called to control leds flashing and colour<br>
   * *Serial.ino* - funcions managing serial port on USB. Used only on testing (\_TEST_ON_USB macro defined)<br>
