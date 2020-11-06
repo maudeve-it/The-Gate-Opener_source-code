@@ -98,7 +98,7 @@ bool stat[6];
   _PRINTLN_TEST_HAND_RES("Reset button pushed");
     
   #ifdef _TEST_WDT
-    wdt_disable();    //disable watchdog 
+    wdt_disable();               //disable watchdog 
   #endif
   startTime=millis();
   while ((millis() - startTime) < RST_BUT_DELAY) {
@@ -107,7 +107,7 @@ bool stat[6];
       
       #ifdef _TEST_WDT
         wdt_enable(WDTO_8S);    //enable watchdog for 8 secs timeout
-        wdt_reset();   //reset watchdog
+        wdt_reset();            //reset watchdog
       #endif
       return;
     }
