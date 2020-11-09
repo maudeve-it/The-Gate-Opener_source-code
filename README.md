@@ -40,7 +40,7 @@ Files description
 <br>
 <br>
 
-# L'Apricancello GSM: codice sorgente (file Arduino
+# L'Apricancello GSM: codice sorgente (sketch Arduino)
 
 Questo e' il codice sorgente per "The Gate Opener".
 Scarica i file in una cartella chiamata "GateO" nella cartella dei progetti di Arduino-IDE
