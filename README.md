@@ -5,7 +5,7 @@ _**Piu' sotto, al termine della lingua inglese trovi il testo in italiano </i>**
 
 <br><br>
 
-# The Gate Opener: source code
+# The GSM Gate Opener: source code (Arduino sketch files)
 
 That's source code for "The Gate Opener".
 Download files in a directory called "GateO" in your Arduino-IDE projects directory
@@ -40,7 +40,7 @@ Files description
 <br>
 <br>
 
-# The Gate Opener: sorgente
+# L'Apricancello GSM: codice sorgente (file Arduino
 
 Questo e' il codice sorgente per "The Gate Opener".
 Scarica i file in una cartella chiamata "GateO" nella cartella dei progetti di Arduino-IDE
