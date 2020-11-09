@@ -1,3 +1,10 @@
+
+<br><br>
+
+_**Piu' sotto, al termine della lingua inglese trovi il testo in italiano </i>**_
+
+<br><br>
+
 # The Gate Opener: source code
 
 That's source code for "The Gate Opener".
