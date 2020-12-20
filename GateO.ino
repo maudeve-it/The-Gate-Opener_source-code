@@ -1,6 +1,6 @@
 // SELECT LANGUAGE
-#define LANG_IT
-//#define LANG_EN
+//#define LANG_IT
+#define LANG_EN
 
 //  Sw/Hw release
 //#define REV_A              // configuration for Arduino Uno and Relay module on Breadboard 

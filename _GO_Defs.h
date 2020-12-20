@@ -2,6 +2,10 @@
 #define GO_DEFS_H
 
 
+// dopo i test mettere a posto: 
+// riga 79,97,99
+
+
 // PIN SETTINGS
 
 #ifdef REV_A                // configuration used for Arduino Uno on Breadboard
@@ -64,14 +68,13 @@
 
 #define LED_LONG_DELAY 60000                  // in case Status don't change, update leds this time
 #define SMS_LED_TIMING 3000                   // SMS LED single blink duration 
-#define SMS_LED_LONG_TIMING 60000             // Sending SMS can require a long time to the GSM network ending operation
 #define SETUP_LED_DELAY 150                   // delay in LED checkup on setup
 #define SIM800_DELAY_BEFORE_RESET 20000       // as per parameter name
 #define RST_LED_F_BLINK 200                   // used on phonebook hand reset
 #define RST_LED_S_BLINK 1800                  // used on phonebook hand reset
 #define RST_BUT_DELAY 5000                    // used on phonebook hand reset
-#define RST_SETUP_TIME 60000                  // time for phonebook setup (reset button pushed)
-//#define RST_SETUP_TIME 300000    METTERE QUESTO DOPO I TEST             // time for phonebook setup (reset button pushed)
+#define RST_SETUP_TIME 300000                 // time for phonebook setup (reset button pushed)
+//#define RST_SETUP_TIME 60000                  // time for phonebook setup (reset button pushed) //SHORT TIMER WHILE TESTING
 #define MAX_PHONENO_IN_LIST 5                 // sms lists this qty of phonenumbers
 #define CSQ_NUM_PHA 3                         // total number of phases in GsmCsq
 
@@ -89,11 +92,11 @@
 #define GSM_CLOCK_SETUP_DELAY 3000
 #define GSM_WAKEUP_DELAY 5000
 #define GSM_CLA_TIMING 5000         // Check GSM line status every...
-//#define GSM_CLA_LONG_TIMING 60000   // in case of a slow command like sending SMS, delay GSM checks for...
-#define GSM_CLK_TIMING 60000        // update local clock variable (currClock) every...     //  set this one when while testing TEST finished or saving status saving on powerdown (via interrupt)
-//#define GSM_CLK_TIMING 3600000      // update local clock variable (currClock) every...     //  set this one when TEST finished or not managing status saving on powerdown
-#define CSC_TIMING    120000            // cleaning SIM phonebook    //  set this one while TESTing                  
-//#define CSC_TIMING 3600000          // cleaning SIM phonebook    //  set this one when TEST finished              
+#define GSM_CLA_LONG_TIMING 60000   // in case of a slow command like sending SMS needs a delay in GSM checking 
+#define GSM_CLK_TIMING 3600000      // update local clock variable (currClock) every...     //  set this one when TEST finished or not managing status saving on powerdown
+//#define GSM_CLK_TIMING 60000        // update local clock variable (currClock) every...     //  set this one while testing TEST or saving status on powerdown (via interrupt)
+#define CSC_TIMING 3600000          // cleaning SIM phonebook    //  set this one when TEST finished              
+//#define CSC_TIMING    120000            // cleaning SIM phonebook    //  set this one while TESTing                  
 
 //EEPROM (memory address and defaults)
 #define EE_APN_ADDR 0                     // APN EEPROM address

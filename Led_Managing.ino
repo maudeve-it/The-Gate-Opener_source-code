@@ -31,7 +31,7 @@ void ClockLed(bool level){
 
 
 void SmsLed() {
-static unsigned long initTime=0, timer=0,timerToSetClk=0;// "timer" time to put led off (or changing it), "timerToSetClk" time retry a clock setup upon fault GPRS connection. Retry only (clockSetupTimes) times 
+static unsigned long initTime=0, timer=0, timerToSetClk=0;// "timer" time to put led off (or changing it), "timerToSetClk" time retry a clock setup upon fault GPRS connection. Retry only (clockSetupTimes) times 
 static byte clockSetupTimes=0; //number of retrying setting up clock. After MAX_CLK_STUP it will never retry anymore   
 static char pre_status=' '; //smsStatus value in previous function call
   /*  managing "SMS/CALL Led" which is:
@@ -43,10 +43,15 @@ static char pre_status=' '; //smsStatus value in previous function call
    *  when OFF, it will flash BLUE if cannot get GSM time updating SIM800 clock
    */
 
-  if ((pre_status==smsStatus) && (millis()-initTime < timer))
+  if ((pre_status==smsStatus) && (millis()-initTime < timer))  // smsStatus already managed but not yet expired
     return;
-  if ((smsStatus=='S') && (pre_status==smsStatus))
-    smsStatus='Q';
+    
+  if (pre_status==smsStatus) {  // smsStatus expired 
+    if (smsStatus=='S')
+      smsStatus='W';
+    else
+      smsStatus='Q';
+  }    
   _PRINTLN_TEST(__FUNCTION__);
   #ifdef _TEST_LEDS
     if (pre_status!=smsStatus) {
@@ -106,12 +111,20 @@ static char pre_status=' '; //smsStatus value in previous function call
     digitalWrite(SMS_G_LED_PIN, LOW);
     digitalWrite(SMS_B_LED_PIN, HIGH);
     digitalWrite(SMS_R_LED_PIN, HIGH);
-    timer=SMS_LED_LONG_TIMING;
+    timer=SMS_LED_TIMING;
+    break;
+  case 'W':                                                       // after sending sms wait GSM_CLA_LONG_TIMING before other activities with SIM800 
+    digitalWrite(SMS_G_LED_PIN, HIGH);
+    digitalWrite(SMS_B_LED_PIN, LOW);
+    digitalWrite(SMS_R_LED_PIN, HIGH);
+    timer=GSM_CLA_LONG_TIMING;
     break;
   };  
   initTime=millis();
-  if (smsStatus!='S')
-    smsStatus = 'Q';
+//  if (smsStatus!='S')
+//    smsStatus = 'Q';
+//  else
+//    smsStatus = 'W';
   pre_status = smsStatus;
 }
 
