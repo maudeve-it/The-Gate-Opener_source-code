@@ -114,9 +114,9 @@ static char pre_status=' '; //smsStatus value in previous function call
     timer=SMS_LED_TIMING;
     break;
   case 'W':                                                       // after sending sms wait GSM_CLA_LONG_TIMING before other activities with SIM800 
-    digitalWrite(SMS_G_LED_PIN, HIGH);
+    digitalWrite(SMS_G_LED_PIN, LOW);
     digitalWrite(SMS_B_LED_PIN, LOW);
-    digitalWrite(SMS_R_LED_PIN, HIGH);
+    digitalWrite(SMS_R_LED_PIN, LOW);
     timer=GSM_CLA_LONG_TIMING;
     break;
   };  
